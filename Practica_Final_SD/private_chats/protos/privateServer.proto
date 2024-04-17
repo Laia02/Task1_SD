@@ -1,0 +1,12 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+message Missatge {
+  string sender = 1;
+  string receiver = 2;
+  string content = 3;
+}
+
+service PrivateChatService {
+  rpc EnviarMissatge (Missatge) returns (google.protobuf.Empty) {}
+}
